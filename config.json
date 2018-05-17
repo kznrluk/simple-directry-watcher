@@ -1,0 +1,7 @@
+{
+    "dir" : ["/var/LHS", "/var/Record"],
+    "twitter" : {
+        "key" : "",
+        "secret" : ""
+    }
+}
