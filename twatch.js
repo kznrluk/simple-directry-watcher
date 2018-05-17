@@ -41,8 +41,10 @@ Promise.all(promises)
                 noFileDirectories.push(DIR_NAME[index])
             }
         });
-        const tweet = `@${config.twitter.user} [twatch.js : No file directory] ${noFileDirectories}`
-        client.post('statuses/update', {status: tweet}, err => {
-            if (err) throw err;
-        });
+        if(noFileDirectories.length){
+            const tweet = `@${config.twitter.user} [twatch.js : No file directory] ${noFileDirectories}`
+            client.post('statuses/update', {status: tweet}, err => {
+                if (err) throw err;
+            });
+        }
     });
