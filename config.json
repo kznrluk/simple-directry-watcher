@@ -4,6 +4,7 @@
         "apiKey" : "",
         "apiSecret" : "",
         "accessToken" : "",
-        "accesssecret" : ""
+        "accesssecret" : "",
+        "user" : ""
     }
 }
