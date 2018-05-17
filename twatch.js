@@ -28,11 +28,12 @@ const isDirectryHasSomeFile = async (dirName) => {
 }
 
 const promises = [];
+const noFileDirectories = [];
+
 for(directory of DIR_NAME){
     promises.push(isDirectryHasSomeFile(directory));
 }
 
-const noFileDirectories = [];
 Promise.all(promises)
     .then(results => {
         results.forEach((result, index) => {
